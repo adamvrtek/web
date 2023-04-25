@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    src: url(../font/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    src: url(../font/Raleway-Italic-VariableFont_wght.ttf);
+}
+
+html {
+    font-family: 'Raleway', sans-serif ;
+}
+
