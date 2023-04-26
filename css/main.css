@@ -6,6 +6,16 @@ html {
     width: 100%;
 }
 
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
 .header__social {
     background-color: var(--blue);
     padding: 0.5em;
@@ -15,13 +25,25 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 0.5em;
+    gap: 1em;
 }
 
 .fa {
     color: white;
 }
 
-h1 {
+.site-name--hidden {
     font-size: 0;
+}
+
+.header__logo {
+    max-height: 100px ;
+}
+
+.header__logo img {
+    max-height: 80px;
+}
+
+.header__main {
+    padding: 10px;
 }
