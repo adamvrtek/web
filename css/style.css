@@ -1,0 +1,76 @@
+.article--background-img {
+    background-image: url(../img/polignano-blur.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 1em;
+    padding: 3em;
+    border-radius: 20px;
+}
+
+.entry-header {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.right-sidebar #primary {
+    width: 100%;
+}
+
+.card {
+    list-style: none;
+    background-color: white;
+    border-radius: 8px;
+    height: 450px;
+    max-width: 270px;
+}
+
+.card p {
+    color: black;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit,minmax(min(100%,max(264px,100%/5)), 1fr));
+    grid-gap: 2em;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.ak-container {
+    width: auto;
+}
+
+.card figure {
+    padding: 5px;
+    overflow: hidden;
+}
+
+.card figure img {
+    object-fit: cover;
+    height: 260px;
+}
+
+.card__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card__duration {
+    padding: 0 12px;
+}
+
+.card__duration p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.card__rating {
+    padding: 0 12px;
+}
