@@ -139,6 +139,8 @@
     position: absolute;
     top: 20px;
     right: 12px;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 /*.heart:hover {
