@@ -143,10 +143,6 @@
 
 }
 
-/*.heart:hover {
-    background-image: url(../img/heart-full.svg);
-}*/
-
 .heart.active {
     background-image: url(../img/heart-full.svg);
     animation-name: scale;
