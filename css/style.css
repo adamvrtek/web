@@ -1,3 +1,7 @@
+:root {
+    --background: rgba(255, 255, 255, 0.7) ;
+}
+
 .article--background-img {
     background-image: url(../img/polignano-blur.png);
     background-repeat: no-repeat;
@@ -5,6 +9,10 @@
     background-position: center;
     margin: 0;
     padding: 3em;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .entry-header {
@@ -18,7 +26,7 @@
 
 .card {
     list-style: none;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--background);
     border-radius: 8px;
     height: 460px;
     max-width: 270px;
@@ -166,3 +174,112 @@
     scale: 1.5;
     transition: 0.3s;
 }*/
+
+.card__price span {
+    color: #555;
+    font-size: 0.75em;
+}
+
+.main-content {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    background-position: center;
+}
+
+.main-content__text {
+    max-width: 60%;
+    background-color: var(--background);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.main-content__info {
+    color: black;
+    background-color: var(--background);
+    padding: 12px 24px;
+    height: min-content;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: solid 1px #555;
+    border-radius: 12px;
+    font-size: 1.25em;
+}
+
+.button-reserve {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 3, 209, 1);
+    border: solid 2px rgba(0, 3, 209, 1);
+    border-radius: 32px;
+    display: block;
+    transition: 0.25s;
+}
+
+.button-reserve a {
+    color: white;
+    margin: 0;
+    transition: 0.25s;
+}
+
+.button-reserve:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgba(0, 3, 209, 1);
+    transition: 0.25s;
+}
+
+.button-reserve:hover a {
+    color: rgba(0, 3, 209, 1);
+    transition: 0.25s;
+}
+
+.main-content__info .card__price p {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content--cooking {
+    background-image: url(../img/cooking-blur.jpg);
+}
+
+.toggle-text {
+    background-color: transparent;
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .main-content__text {
+       max-width: 90%;
+       display: -webkit-box;
+       -webkit-box-orient: vertical;
+        max-width: 90%;
+        -webkit-line-clamp: 16;
+        white-space: pre-wrap;
+        overflow: hidden;
+    }
+
+    .main-content__text p {
+        font-size: 0.7em;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .toggle-text {
+        display: block;
+    }
+}
