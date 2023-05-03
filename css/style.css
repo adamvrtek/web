@@ -192,10 +192,13 @@
     background-repeat: no-repeat;
     margin: 0;
     background-position: center;
+    min-height: 750px;
 }
 
 .main-content__text {
     max-width: 60%;
+    display: flex;
+    flex-direction: column;
     background-color: var(--background);
     padding: 24px;
     border-radius: 12px;
@@ -210,7 +213,6 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    border: solid 1px #555;
     border-radius: 12px;
     font-size: 1.25em;
 }
@@ -253,12 +255,35 @@
     background-image: url(../img/cooking-blur.jpg);
 }
 
+.main-content--wine {
+    background-image: url(../img/wine-blur.jpg);
+}
+
+.main-content--valley {
+    background-image: url(../img/itria-blur.jpg);
+}
+
+.main-content--monopoli {
+    background-image: url(../img/monopoli-backgroud-blur.jpg);
+}
+
+.main-content--nature {
+    background-image: url(../img/nature-blur.jpg);
+}
+
+.main-content--market {
+    background-image: url(../img/market-background-blur.jpg);
+}
+
+.main-content--ceramic {
+    background-image: url(../img/ceramics-blur.jpg);
+}
+
 .toggle-text {
-    background-color: transparent;
     display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
     .main-content {
         flex-direction: column;
     }
@@ -271,15 +296,45 @@
         -webkit-line-clamp: 16;
         white-space: pre-wrap;
         overflow: hidden;
+        position: relative;
+    }
+
+    .main-content__text::after {
+        content: "";
+        width: 100%;
+        height: 24px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 
     .main-content__text p {
-        font-size: 0.7em;
+        font-size: 0.8em;
         margin: 0;
-        overflow: hidden;
     }
 
     .toggle-text {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        bottom: 6px;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        border-top-left-radius: 50%;
+        z-index: 1;
+        background-color: white;
+    }
+
+    .toggle-text img {
+        transition: 0.5s;
+    }
+
+    .toggle-text.active img {
+        rotate: 180deg;
+        transition: 0.5s;
     }
 }
