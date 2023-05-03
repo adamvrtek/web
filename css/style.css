@@ -297,6 +297,7 @@
         white-space: pre-wrap;
         overflow: hidden;
         position: relative;
+        transition: 0.5s;
     }
 
     .main-content__text::after {
@@ -327,6 +328,7 @@
         border-top-left-radius: 50%;
         z-index: 1;
         background-color: white;
+        cursor: pointer;
     }
 
     .toggle-text img {
