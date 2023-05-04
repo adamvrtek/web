@@ -475,6 +475,7 @@ h6 { }
                 </header>
                 <div class="main-content main-content--market">
                     <div id="textToggle" class="main-content__text">
+                        <h2>Overview</h2>
                         <button onclick="toggle()" class="toggle-text">
                             <img src="img/expand_more_FILL0_wght400_GRAD0_opsz48.svg" alt="See more">
                         </button>
@@ -506,16 +507,39 @@ h6 { }
                                 <img src="img/Star-blank.svg" alt="Half full star">
                                 <img src="img/Star-blank.svg" alt="Blank star">
                             </div>
-                            <p>
-                                0 ratings
-                            </p>
+                            <a href="#rating">
+                                <p>
+                                    0 ratings
+                                </p>
+                            </a>
                         </div>
                         <div class="card__price">
-                            <p> From €240 per person <span>(min. 2 people)</span></p>
+                            <p class="bold"> From €240 per person <span>(min. 2 people)</span></p>
                         </div>
                         <div class="button-reserve">
                             <a href="" class="bold">RESERVE NOW</a>
                         </div>
+                    </div>
+                </div>
+                <div class="rating" id="rating">
+                    <div class="rating__main">
+                        <h2>Ratings and Reviews</h2>
+                        <div class="rating__stars">
+                            <img src="img/Star-blank.svg" alt="Empty star">
+                            <img src="img/Star-blank.svg" alt="Empty star">
+                            <img src="img/Star-blank.svg" alt="Empty star">
+                            <img src="img/Star-blank.svg" alt="Empty star">
+                            <img src="img/Star-blank.svg" alt="Empty star">
+                        </div>
+                        <div class="rating__overall">
+                            <p>0<span class="rating__overall--small">/5</span></p>
+                        </div>
+                        <div class="rating__review-count">
+                            <p>0 reviews</p>
+                        </div>
+                    </div>
+                    <div class="rating__user">
+                        <h3>User reviews:</h3>
                     </div>
                 </div>
                 

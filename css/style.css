@@ -2,6 +2,10 @@
     --background: rgba(255, 255, 255, 0.7) ;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .article--background-img {
     background-image: url(../img/polignano-blur.png);
     background-repeat: no-repeat;
@@ -197,11 +201,17 @@
 
 .main-content__text {
     max-width: 60%;
-    display: flex;
-    flex-direction: column;
     background-color: var(--background);
     padding: 24px;
     border-radius: 12px;
+    transition: ease 0.3s;
+}
+
+.main-content__text h2 {
+    color: black;
+    font-family: "Cagliostro";
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .main-content__info {
@@ -209,7 +219,7 @@
     background-color: var(--background);
     padding: 12px 24px;
     height: min-content;
-    min-width: 300px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -251,7 +261,64 @@
     flex-direction: column;
 }
 
-.main-content--cooking {
+.rating {
+    padding: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.rating__main {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating__stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.rating__stars img {
+    width: 50px;
+}
+
+.rating__overall {
+    max-width: min-content;
+    padding: 0 32px;
+    font-size: 48px;
+    font-weight: bolder;
+    color: gold;
+    -webkit-text-stroke: 2px #555;
+    text-align: center;
+    border-radius: 48px
+}
+
+.rating__overall p {
+    margin: 0;
+}
+
+.rating__overall--small {
+    font-size: 0.75em;
+    color: #555;
+}
+
+.rating__review-count {
+    font-size: 1.25em;
+}
+
+.main-content__info .card__rating a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-content .card__rating a:hover {
+    text-decoration: underline;
+}
+
+.main-content--cook {
     background-image: url(../img/cooking-blur.jpg);
 }
 
@@ -292,9 +359,8 @@
        max-width: 90%;
        display: -webkit-box;
        -webkit-box-orient: vertical;
-        max-width: 90%;
-        -webkit-line-clamp: 16;
-        white-space: pre-wrap;
+        -webkit-line-clamp: 10;
+       /* white-space: pre-wrap;*/
         overflow: hidden;
         position: relative;
         transition: 0.5s;
@@ -312,7 +378,7 @@
 
     .main-content__text p {
         font-size: 0.8em;
-        margin: 0;
+        margin-bottom: 1em;
     }
 
     .toggle-text {
@@ -338,5 +404,11 @@
     .toggle-text.active img {
         rotate: 180deg;
         transition: 0.5s;
+    }
+
+    .rating {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
     }
 }
