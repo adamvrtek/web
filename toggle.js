@@ -18,3 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+function achtung() {
+    alert("This function is unavailable at the moment");
+}
