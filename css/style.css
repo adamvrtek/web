@@ -219,6 +219,10 @@ html {
     background-color: #0003d1;
 }
 
+.nav--home a#home span {
+ background-color: #0003d1;
+}
+
 .nav ul {
     display: flex;
     flex-direction: row;
@@ -370,6 +374,10 @@ html {
     justify-content: center;
 }
 
+.ak-container--rating, .ak-container--footer {
+    background-color: #eee;
+}
+
 .rating {
     max-width: 1170px;
     width: 100%;
@@ -479,12 +487,12 @@ html {
 
 .contact__text p a {
     color: #444;
-    border-bottom: dashed 1px #555;
+    border-bottom: solid 1px #555;
 }
 
 .contact__text p a:hover {
-    border-bottom: solid 0.5px;
-    color: black;
+    border-bottom: solid 2px #0003d1;
+    color: #0003d1;
     transition: 0s;
 }
 
@@ -596,6 +604,7 @@ html {
 
     .nav ul a:first-child::before {
         content: "";
+        display: block;
         background-image: url(../img/home.svg);
         background-size: contain;
         height: 24px;
@@ -604,6 +613,7 @@ html {
 
     .nav ul a:nth-child(2)::before {
         content: "";
+        display: block;
         background-image: url(../img/about.svg);
         background-size: contain;
         height: 24px;
@@ -612,6 +622,7 @@ html {
 
     .nav ul a:nth-child(3)::before {
         content: "";
+        display: block;
         background-image: url(../img/Phone.svg);
         background-size: contain;
         height: 24px;
@@ -620,5 +631,9 @@ html {
 
     .nav span {
         display: none;
+    }
+
+    body {
+        position: relative;
     }
 }
