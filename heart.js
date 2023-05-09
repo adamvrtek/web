@@ -81,3 +81,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    let hamelmnts = document.querySelectorAll(".heart8");
+    for (const btn of document.querySelectorAll(".heart8")) {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            for (const element of hamelmnts) {
+                element.classList.toggle("active");
+            }  
+        });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    let hamelmnts = document.querySelectorAll(".heart9");
+    for (const btn of document.querySelectorAll(".heart9")) {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            for (const element of hamelmnts) {
+                element.classList.toggle("active");
+            }  
+        });
+    }
+});
