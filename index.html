@@ -289,15 +289,53 @@ h6 { }
 </style>
 <link rel="stylesheet" href="css/style.css">
 <script src="heart.js"></script>
-<script src="scrollmenu.js"></script>
+<script src="scrollmenu.js" defer></script>
+<script src="submenu.js"></script>
+
+<!--<script type="text/javascript">
+  
+    jQuery(document).ready(function( $ ) { // When jQuery is ready
+    
+    function check_from_top_de(){ // Create our function
+      var scroll = $(window).scrollTop(); // Check scroll distance
+      if (scroll >= 300) { // If it is equal or more than 300 - you can change this to what you want
+        $("#dynamic").addClass("newClass"); // Add custom class to body
+      } else {
+        $("#dynamic").removeClass("newClass"); // When scrolled to the top, remove the class
+      }
+    }
+    
+    check_from_top_de(); // On load, run the function
+    
+    $(window).scroll(function() { // When scroll - run function
+      check_from_top_de();
+    });
+    
+  });
+  </script>-->
+  <!--<script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("stickyNav");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>-->
 </head>
 
 <body data-rsssl=1 class="page-template-default page page-id-6392 mltlngg-en_GB group-blog fullwidth header-white right-sidebar">
-<div id="page" class="hfeed site">
+    
+    <div id="page" class="hfeed site">
     <div id="outer-wrap">
         <div id="inner-wrap">            
                         
-            <header id="masthead" class="site-header  classic" role="banner">
+            <header id="homelink" class="site-header  classic" role="banner">
                 
                 <div class="header-social">
                     <div class="ak-container">
@@ -326,6 +364,8 @@ h6 { }
                         </div> 
                     </div>
                 </div>
+
+                
                             
                 <div class="ak-container" id="main-header">
                     <div class="site-branding logo-left">
@@ -336,12 +376,28 @@ h6 { }
                     </div>
 
                 
-                    <div class="nav__wrapper" id="scrollMenu">
-                        <nav class="nav nav--home">
+                    <div class="nav__wrapper">
+                        <nav class="nav nav--home nav--main">
                             <ul>
-                                <a href="#home" id="home"><li>Home <span></span></li></a>
-                                <a href="#about"><li>About <span></span></li></a>
-                                <a href="#contact"><li>Contacts<span></span></li></a>
+                                <li class="li-home">
+                                    <a href="#homelink" id="home">Home<span></span></a>
+                                </li>
+                                <li class="li-about">
+                                    <a href="#about">About<span></span></a>
+                                </li>
+                                <li class="li-phone">
+                                    <a href="#contact">Contacts<span></span></a>
+                                </li>
+                                <li class="li-tour">
+                                    <a href="" class="linkSub">Tours<span></span></a>
+                                    <ul class="submenu">
+                                        <li><a href="01-cooking-class.html">Cooking class<span></span></a></li>
+                                        <li><a href="08-vineyard.html">Music in Vineyard<span></span></a></li>
+                                        <li><a href="05-nature-walk.html">Nature walk<span></span></a></li>
+                                        <li><a href="09">Wednesday tour<span></span></a></li>
+                                            
+                                    </ul>
+                                </li>       
                             </ul>
     
                         </nav>

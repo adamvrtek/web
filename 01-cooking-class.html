@@ -290,6 +290,8 @@ h6 { }
 <link rel="stylesheet" href="css/style.css">
 <script src="heart.js"></script>
 <script src="toggle.js"></script>
+<script src="submenu.js"></script>
+
 </head>
 
 <body data-rsssl=1 class="page-template-default page page-id-6392 mltlngg-en_GB group-blog fullwidth header-white right-sidebar">
@@ -336,11 +338,27 @@ h6 { }
                     </div>
 
                     <div class="nav__wrapper">
-                        <nav class="nav">
+                        <nav class="nav nav--tour nav--main">
                             <ul>
-                                <a href="index.html"><li>Home <span></span></li></a>
-                                <a href="#about"><li>About <span></span></li></a>
-                                <a href="#contact"><li>Contacts<span></span></li></a>
+                                <li class="li-home">
+                                    <a href="index.html" id="home">Home<span></span></a>
+                                </li>
+                                <li class="li-about">
+                                    <a href="#about">About<span></span></a>
+                                </li>
+                                <li class="li-phone">
+                                    <a href="#contact">Contacts<span></span></a>
+                                </li>
+                                    <li class="li-tour">
+                                        <a href="" class="linkSub">Tours<span></span></a>
+                                        <ul class="submenu">
+                                            <li><a href="01-cooking-class.html">Cooking class<span></span></a></li>
+                                            <li><a href="08-vineyard.html">Music in Vineyard<span></span></a></li>
+                                            <li><a href="05-nature-walk.html">Nature walk<span></span></a></li>
+                                            <li><a href="09">Wednesday tour<span></span></a></li>
+                                            
+                                        </ul>
+                                    </li>       
                             </ul>
     
                         </nav>
@@ -434,6 +452,27 @@ h6 { }
                                 </div>
                                 <div class="rating__user">
                                     <h3>User reviews:</h3>
+                                    <div class="rating__user__card">
+                                        <div class="rating__user__card__name">
+                                            <div>
+                                                <img src="img/person_FILL0_wght400_GRAD0_opsz48.svg" alt="User's profile picture">
+                                            </div>
+                                            <div>
+                                                <p>User's profile name</p>
+                                            </div>
+                                        </div>
+                                        <div class="rating__user__card__stars">
+                                            <img src="img/Star-blank.svg" alt="Empty star">
+                                            <img src="img/Star-blank.svg" alt="Empty star">
+                                            <img src="img/Star-blank.svg" alt="Empty star">
+                                            <img src="img/Star-blank.svg" alt="Empty star">
+                                            <img src="img/Star-blank.svg" alt="Empty star">
+                                        </div>
+                                        <div class="rating__user__card__review">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, dolore? Vitae, non quod at laudantium iste nostrum explicabo maiores rem vel repellendus doloremque corrupti, consequuntur nam accusantium, quasi officiis illum.</p>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                     </div>

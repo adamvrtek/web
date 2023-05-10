@@ -1,9 +1,17 @@
 :root {
-    --background: rgba(255, 255, 255, 0.7) ;
+    --background-transparent: rgba(255, 255, 255, 0.7) ;
+    --background-secondary: #eee;
+    --highlight: rgba(0, 3, 209, 1);
+    --text-light: #555;
+    --contact-text: #444;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+#inner-wrap {
+    margin: 0;
 }
 
 .article--background-img {
@@ -30,7 +38,7 @@ html {
 
 .card {
     list-style: none;
-    background-color: var(--background);
+    background-color: var(--background-transparent);
     border-radius: 8px;
     height: 460px;
     max-width: 270px;
@@ -139,7 +147,7 @@ html {
 }
 
 .main-title {
-    padding-left: 32px;
+    padding: 0 32px;
 }
 
 .div--about {
@@ -160,7 +168,7 @@ html {
 .div__title::after {
     content: "";
     display: block;
-    background-color: #0003d1;
+    background-color: var(--highlight);
     width: 100%;
     height: 2px;
 }
@@ -173,10 +181,6 @@ html {
 
 }
 
-
-.nav__wrapper {
-
-}
 
 .nav {
     height: 100%;
@@ -191,16 +195,56 @@ html {
     align-items: center;
     display: block;
     height: 100%;
-}
-
-.nav a {
-    height: 100%;
     padding: 30px 8px 0;
     position: relative;
 }
 
+.nav li a {
+    display: inline-block;
+    height: 100%;
+    color: black;
+}
+
+.nav ul li a.active span {
+    background-color: var(--highlight);
+}
+
+.nav ul li a.active ~ .submenu {
+    display: flex;
+}
+
 .site-branding.logo-left {
     padding: 0;
+}
+
+.nav li a:visited {
+    color: black;
+}
+
+.nav ul.submenu {
+    display: none;
+    background-color: white;
+    border: var(--background-secondary) solid 2px;
+    z-index: 10;
+    position: absolute;
+    bottom: -190px;
+    left: -40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+    width: max-content;
+    height: min-content;
+}
+
+.nav ul.submenu li {
+    padding: 6px;
+    height: min-content;
+    border-bottom: solid var(--background-secondary) 2px ;
+    height: 42px;
+}
+
+.nav li:hover .submenu {
+    display: flex;
 }
 
 .nav li span {
@@ -211,16 +255,25 @@ html {
     height: 3px;
 }
 
-.nav li a:visited {
-    color: black;
+.nav--main li:hover span {
+    background-color: var(--highlight);
 }
 
-.nav a:hover span {
-    background-color: #0003d1;
+.nav .submenu li span {
+    background-color: white;
+    height: 2px;
+}
+
+.nav .submenu li:hover span {
+    background-color: var(--highlight);
 }
 
 .nav--home a#home span {
- background-color: #0003d1;
+    background-color: var(--highlight);
+}
+
+.nav--tour a#tour span {
+    background-color: var(--highlight);
 }
 
 .nav ul {
@@ -238,7 +291,7 @@ html {
     justify-content: space-between;
     align-items: stretch;
     max-width: 1170px;
-    padding-right: 2em;
+    padding-right: 3em;
 }
 
 .ak-container#main-header::before {
@@ -287,7 +340,7 @@ html {
 }*/
 
 .card__price span {
-    color: #555;
+    color: var(--text-light);
     font-size: 0.75em;
 }
 
@@ -308,7 +361,7 @@ html {
 
 .main-content__text {
     max-width: 60%;
-    background-color: var(--background);
+    background-color: var(--background-transparent);
     padding: 24px;
     border-radius: 12px;
     transition: ease 0.3s;
@@ -323,7 +376,7 @@ html {
 
 .main-content__info {
     color: black;
-    background-color: var(--background);
+    background-color: var(--background-transparent);
     padding: 12px 24px;
     height: min-content;
     min-width: 320px;
@@ -338,8 +391,8 @@ html {
     margin: 0 auto;
     text-align: center;
     padding: 0.5em 1em;
-    background-color: rgba(0, 3, 209, 1);
-    border: solid 2px rgba(0, 3, 209, 1);
+    background-color: var(--highlight);
+    border: solid 2px var(--highlight);
     border-radius: 32px;
     display: block;
     transition: 0.25s;
@@ -354,12 +407,12 @@ html {
 .button-reserve:hover {
     cursor: pointer;
     background-color: white;
-    color: rgba(0, 3, 209, 1);
+    color: var(--highlight);
     transition: 0.25s;
 }
 
 .button-reserve:hover a {
-    color: rgba(0, 3, 209, 1);
+    color: var(--highlight);
     transition: 0.25s;
 }
 
@@ -414,7 +467,7 @@ html {
     font-size: 48px;
     font-weight: bolder;
     color: gold;
-    -webkit-text-stroke: 2px #555;
+    -webkit-text-stroke: 2px var(--text-light);
     text-align: center;
     border-radius: 48px
 }
@@ -425,7 +478,7 @@ html {
 
 .rating__overall--small {
     font-size: 0.75em;
-    color: #555;
+    color: var(--text-light);
 }
 
 .rating__review-count {
@@ -473,6 +526,31 @@ html {
     display: none;
 }
 
+.rating__user__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+.rating__user__card__name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.rating__user__card__name div:first-child {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: solid 1px var(--text-light);
+    background-color: white;
+}
+
+.rating__user__card__name p {
+    margin-bottom: 0;
+}
 
 .footer-block#contact {
     width: "";
@@ -482,17 +560,17 @@ html {
 }
 
 .contact__text p {
-    color: #444;
+    color: var(--contact-text);
 }
 
 .contact__text p a {
-    color: #444;
-    border-bottom: solid 1px #555;
+    color: var(--contact-text);
+    border-bottom: solid 1px var(--text-light);
 }
 
 .contact__text p a:hover {
-    border-bottom: solid 2px #0003d1;
-    color: #0003d1;
+    border-bottom: solid 2px var(--highlight);
+    color: var(--highlight);
     transition: 0s;
 }
 
@@ -589,11 +667,13 @@ html {
         border-bottom: 2px solid #eee;
     }
 
-    .nav a {
+    .nav li {
         padding-top: 0;
         display: flex;
         flex-direction: row;
         gap: 0.25em;
+        font-size: 0.9em;
+        padding-left: 0;
     }
 
     .nav ul {
@@ -602,7 +682,7 @@ html {
         justify-content: space-evenly;
     }
 
-    .nav ul a:first-child::before {
+    .li-home::before {
         content: "";
         display: block;
         background-image: url(../img/home.svg);
@@ -611,7 +691,7 @@ html {
         width: 24px;
     }
 
-    .nav ul a:nth-child(2)::before {
+    .li-about::before {
         content: "";
         display: block;
         background-image: url(../img/about.svg);
@@ -620,7 +700,7 @@ html {
         width: 24px;
     }
 
-    .nav ul a:nth-child(3)::before {
+    .li-phone::before {
         content: "";
         display: block;
         background-image: url(../img/Phone.svg);
@@ -629,11 +709,47 @@ html {
         width: 24px;
     }
 
+    .li-tour::before {
+        content: "";
+        display: block;
+        background-image: url(../img/travel.svg);
+        background-size: contain;
+        height: 24px;
+        width: 24px;
+    }
+
+    .nav li {
+        position: static;
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    .nav ul.submenu {
+        left: 0;
+        bottom: -60px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: #f3f3f3;
+        font-size: 0.8em;
+    }
+
+    .nav ul.submenu li {
+        padding: 0 4px;
+    }
+
+    .nav ul.submenu li a {
+        height: auto;
+    }
+
     .nav span {
         display: none;
     }
 
-    body {
-        position: relative;
-    }
+  
+
+    
 }
+
