@@ -209,10 +209,6 @@ html {
     background-color: var(--highlight);
 }
 
-.nav ul li a.active ~ .submenu {
-    display: flex;
-}
-
 .site-branding.logo-left {
     padding: 0;
 }
@@ -222,29 +218,46 @@ html {
 }
 
 .nav ul.submenu {
-    display: none;
+    visibility: hidden;
+    opacity: 0;    
     background-color: white;
     border: var(--background-secondary) solid 2px;
-    z-index: 10;
+    z-index: -4;
     position: absolute;
-    bottom: -190px;
-    left: -40px;
+    bottom: -180px;
+    left: 0;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 6px;
     width: max-content;
     height: min-content;
+    transition: all 0.3s ease;
 }
+
+
+.nav li:hover .submenu {
+    visibility: visible;
+    bottom: -190px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    
+}
+
+.nav ul li a.active ~ .submenu {
+    visibility: visible;    
+    bottom: -190px;
+    opacity: 1;
+    z-index: 9999;
+}
+
 
 .nav ul.submenu li {
     padding: 6px;
     height: min-content;
     border-bottom: solid var(--background-secondary) 2px ;
     height: 42px;
-}
-
-.nav li:hover .submenu {
-    display: flex;
 }
 
 .nav li span {
@@ -273,6 +286,22 @@ html {
 }
 
 .nav--tour a#tour span {
+    background-color: var(--highlight);
+}
+
+.nav .submenu--cook li#cookingSpan span {
+    background-color: var(--highlight);
+}
+
+.nav .submenu--vineyard li#vineyardSpan span {
+    background-color: var(--highlight);
+}
+
+.nav .submenu--nature li#natureSpan span {
+    background-color: var(--highlight);
+}
+
+.nav .submenu--09 li#wedSpan span {
     background-color: var(--highlight);
 }
 
@@ -522,6 +551,10 @@ html {
     background-image: url(../img/ceramics-blur.jpg);
 }
 
+.main-content--09 {
+    background-image: url(../img/logo-definitvo.png);
+}
+
 .toggle-text {
     display: none;
 }
@@ -726,14 +759,22 @@ html {
         position: relative;
     }
 
-    .nav ul.submenu {
+    .nav ul li ul.submenu {
         left: 0;
-        bottom: -60px;
+        bottom: -30px;
+        opacity: 0;
         flex-direction: row;
         justify-content: space-evenly;
         width: 100%;
         background-color: #f3f3f3;
         font-size: 0.8em;
+        transition: all ease 0.3s;
+    }
+
+    .nav ul li a.active ~ .submenu {
+        bottom: -60px;
+        opacity: 1;
+        transition: all ease 0.3s;
     }
 
     .nav ul.submenu li {
@@ -749,10 +790,13 @@ html {
     }
 
     .nav li:hover .submenu {
-        display: none;
+        visibility: hidden;
+        bottom: -30px;
+        transition: all ease 0.3s;
+        opacity: 0;
     }
 
-  
+    
 
     
 }

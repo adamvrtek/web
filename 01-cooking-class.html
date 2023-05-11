@@ -338,27 +338,27 @@ h6 { }
                     </div>
 
                     <div class="nav__wrapper">
-                        <nav class="nav nav--tour nav--main">
+                        <nav onmouseover="hoverTour()" onmouseout="unhoverTour()" class="nav nav--tour nav--main" id="navMain">
                             <ul>
                                 <li class="li-home">
                                     <a href="index.html" id="home">Home<span></span></a>
+                                </li>
+                                <li class="li-tour">
+                                    <a href="" class="linkSub" id="tour">Tours<span></span></a>
+                                    <ul onmouseover="hoverCook()" onmouseout="unhoverCook()" class="submenu submenu--cook" id="navSub">
+                                        <li id="cookingSpan"><a href="01-cooking-class.html">Cooking class<span></span></a></li>
+                                        <li id="vineyardSpan"><a href="08-vineyard.html">Music in Vineyard<span></span></a></li>
+                                        <li id="natureSpan"><a href="05-nature-walk.html">Nature walk<span></span></a></li>
+                                        <li><a href="09-tour.html">Wednesday tour<span></span></a></li>
+                                        
+                                    </ul>
                                 </li>
                                 <li class="li-about">
                                     <a href="#about">About<span></span></a>
                                 </li>
                                 <li class="li-phone">
                                     <a href="#contact">Contacts<span></span></a>
-                                </li>
-                                    <li class="li-tour">
-                                        <a href="" class="linkSub">Tours<span></span></a>
-                                        <ul class="submenu">
-                                            <li><a href="01-cooking-class.html">Cooking class<span></span></a></li>
-                                            <li><a href="08-vineyard.html">Music in Vineyard<span></span></a></li>
-                                            <li><a href="05-nature-walk.html">Nature walk<span></span></a></li>
-                                            <li><a href="09">Wednesday tour<span></span></a></li>
-                                            
-                                        </ul>
-                                    </li>       
+                                </li>       
                             </ul>
     
                         </nav>
