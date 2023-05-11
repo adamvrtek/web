@@ -748,6 +748,10 @@ html {
         display: none;
     }
 
+    .nav li:hover .submenu {
+        display: none;
+    }
+
   
 
     
