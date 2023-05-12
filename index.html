@@ -288,9 +288,9 @@ h5 { }
 h6 { }
 </style>
 <link rel="stylesheet" href="css/style.css">
-<script src="heart.js"></script>
-<script src="scrollmenu.js" defer></script>
-<script src="submenu.js"></script>
+<script src="script/heart.js" defer></script>
+<!--<script src="scrollmenu.js" defer></script>-->
+<script src="script/submenu.js"></script>
 
 <!--<script type="text/javascript">
   
@@ -327,7 +327,7 @@ h6 { }
       }
     }
     </script>-->
-</head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" /></head>
 
 <body data-rsssl=1 class="page-template-default page page-id-6392 mltlngg-en_GB group-blog fullwidth header-white right-sidebar">
     
@@ -467,7 +467,7 @@ h6 { }
                                     </div>
                                 </div>
                             </a>
-                            <a href="" class="heart heart1"></a>
+                            <a href="" class="heart" id="heart1"></a>  
                         </li>
                         <li class="card">
                             <a href="08-vineyard.html" class="card-link">
@@ -513,7 +513,7 @@ h6 { }
                                      </div>
                                  </div>
                             </a>
-                            <a href="" class="heart heart8"></a>
+                            <a href="" class="heart" id="heart8"></a>
                          </li>
 <!--                        <li class="card">
                            <a href="02-wine-tasting.html" class="card-link">
@@ -697,7 +697,7 @@ h6 { }
                                     </div>
                                 </div>
                             </a>
-                            <a href="" class="heart heart5"></a>
+                            <a href="" class="heart" id="heart5"></a>
                         </li>
                         <li class="card">
                             <a href="09-tour.html" class="card-link">
@@ -743,7 +743,7 @@ h6 { }
                                     </div>
                                 </div>
                             </a>
-                            <a href="" class="heart heart9"></a>
+                            <a href="" class="heart" id="heart9"></a>
                         </li>
 <!--                        <li class="card">
                             <a href="06-apulian-day.html" class="card-link">
@@ -864,7 +864,7 @@ h6 { }
                             The strong point is <strong class="bold">Apulia</strong>, a region of southern Italy, where young people can train surrounded by beautiful locations.
                         </p>
                         <p>
-                            <p>Cultura e Dintorni can count on an expert staff, specialized in the international mobility sector, which knows and understands the needs of a sending organization.</p>
+                            Cultura e Dintorni can count on an expert staff, specialized in the international mobility sector, which knows and understands the needs of a sending organization.
                         </p>
                     </div>
                 </div>
@@ -982,5 +982,22 @@ var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPr
 </script>
 <script type='text/javascript' src='https://www.culturaedintorni.org/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=4.9.22'></script>
 <script type='text/javascript' src='https://www.culturaedintorni.org/wp-includes/js/mediaelement/renderers/vimeo.min.js?ver=4.2.6-78496d1'></script>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#237afc"
+    },
+    "button": {
+      "background": "#fff",
+      "text": "#237afc"
+    }
+  },
+  "theme": "classic",
+  "type": "opt-in"
+});
+</script>
 </body>
 </html>
