@@ -1,7 +1,7 @@
 :root {
-    --background-transparent: rgba(255, 255, 255, 0.7) ;
+    --background-transparent: #ffffffb3 ;
     --background-secondary: #eee;
-    --highlight: rgba(0, 3, 209, 1);
+    --highlight: #0003d1;
     --text-light: #555;
     --contact-text: #444;
 }
@@ -233,6 +233,7 @@ html {
     width: max-content;
     height: min-content;
     transition: all 0.3s ease;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -583,6 +584,10 @@ html {
     display: none;
 }
 
+.rating__user {
+    max-width: 100%;
+}
+
 .rating__user__card {
     display: flex;
     flex-direction: column;
@@ -724,6 +729,11 @@ html {
     .heart__box p {
         visibility: hidden;
     }
+
+    .card:hover {
+        transform: scale(1);
+    }
+
 }
 
 @media (max-width: 750px) {
@@ -799,7 +809,7 @@ html {
 
     .nav ul li ul.submenu {
         left: 0;
-        bottom: -30px;
+        bottom: -40px;
         opacity: 0;
         flex-direction: row;
         justify-content: space-evenly;
@@ -829,7 +839,7 @@ html {
 
     .nav li:hover .submenu {
         visibility: hidden;
-        bottom: -30px;
+        bottom: -40px;
         transition: all ease 0.3s;
         opacity: 0;
     }
@@ -839,3 +849,37 @@ html {
     
 }
 
+.u-carousel-indicators {
+    bottom: -20px;
+}
+
+section a.u-carousel-control  {
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    top: 80% !important;
+}
+
+.u-carousel .u-carousel-control span svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+section .u-carousel-control-prev {
+    left: -48px;
+}
+
+section .u-carousel-control-next {
+    right: -24px;
+}
+
+.u-carousel-indicators li {
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    section .u-carousel-control-prev {
+        left: -36px;
+    } 
+}

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
 function hover() {
     var x = document.getElementById("navMain")
     console.log(x)
